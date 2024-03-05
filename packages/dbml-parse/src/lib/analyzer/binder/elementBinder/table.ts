@@ -49,6 +49,7 @@ export default class TableBinder implements ElementBinder {
       const errors: CompileError[] = [];
 
       const args = [field.callee, ...field.args];
+
       if (_.last(args) instanceof ListExpressionNode) {
         const listExpression = _.last(args) as ListExpressionNode;
         const settingsMap = aggregateSettingList(listExpression).getValue();
