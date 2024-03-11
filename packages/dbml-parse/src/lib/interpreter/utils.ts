@@ -107,8 +107,7 @@ export function getRefId(sym1: ColumnSymbol | ColumnSymbol[], sym2: ColumnSymbol
 
   const firstId = sym1.id.toString();
   const secondId = (sym2 as ColumnSymbol).id.toString();
-
-    return firstId < secondId ? `${firstId}-${secondId}` : `${secondId}-${firstId}`;
+  return firstId < secondId ? `${firstId}-${secondId}` : `${secondId}-${firstId}`;
 }
 
 export function isSameEndpoint(sym1: ColumnSymbol, sym2: ColumnSymbol): boolean;
